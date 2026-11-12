@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect /index.html (and any-dir/index.html) to the clean directory URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/(.*)index\.html[?\s] [NC]
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
